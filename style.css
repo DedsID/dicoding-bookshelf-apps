@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Noto Serif JP", serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #212327;
+  color: white;
+}
+
+input,
+button {
+  font-size: 14px;
+}
+
+.head_bar {
+  padding: 45px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.head_bar > h1 {
+  font-size: 24px;
+}
+
+.head_bar > h1 > i {
+  padding-right: 5px;
+}
+
+.head_bar > h1 > span {
+  font-weight: 100;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.upper {
+  display: flex;
+  gap: 20px;
+}
+
+.upper > .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 52px;
+  font-weight: bold;
+  padding: 10px;
+  padding-right: 30px;
+  padding-top: 10%;
+}
+
+@media (min-width: 800px) {
+  .upper {
+    height: 85vh;
+  }
+
+  .upper > .hero {
+    width: 55%;
+    border-right: solid 1px white;
+    text-align: right;
+  }
+}
+
+.upper > .hero span {
+  font-weight: 100;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.input_section > h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input_section > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: #4783fe;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+}
+
+.input_section > form > .input > label {
+  font-weight: 400;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+
+.search_section > form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.search_section > form > input {
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #212327;
+  width: 100%;
+  border: none;
+}
+
+.search_section > form > button {
+  background-color: #4783fe;
+  width: 60px;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  padding: 8px;
+}
+
+.search_section > form > button > i {
+  padding-right: 5px;
+}
+
+/* flexbox untuk rak buku */
+
+.list_book {
+  display: flex;
+  gap: 20px;
+}
+
+/* hasil input di dalam rak buku */
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  flex: 1;
+  min-height: 200px;
+  background-color: #414654;
+}
+.book_shelf > h2 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: solid 2px #212327;
+  padding-bottom: 10px;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: green;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: red;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  width: 50%;
+  max-width: 400px;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1001;
+}
+
+.modal > .modal-content {
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal > .modal-content > .buttonModal {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+}
+
+.modal > .modal-content > .buttonModal > button {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal > .modal-content > .buttonModal > button:first-child {
+  background-color: #4783fe;
+}
+
+.modal > .modal-content > .buttonModal > button:last-child {
+  background-color: red;
+}
+
+@media (max-width: 800px) {
+  .upper {
+    flex-direction: column;
+  }
+
+  .upper > .hero > .text {
+    height: 65vh;
+  }
+
+  .list_book {
+    flex-direction: column;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Efek transparan */
+  backdrop-filter: blur(5px); /* blur */
+  z-index: 1000;
+}
